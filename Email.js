@@ -8,7 +8,7 @@ let smtpConfig = {
     secure: false, // False, porque usa STARTTLS. true solo para TLS
     auth: {
         user: 'ElasticAutomation@outlook.com', 
-        pass: 'Tsoft2020'
+        pass: 'T'
     }
 };
 
