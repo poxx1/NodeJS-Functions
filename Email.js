@@ -46,13 +46,14 @@ function sendEmail(callback) {
     let transporter = nodemailer.createTransport(smtpConfig);
     let mailOptions = {
         //Emisor
-        from: `Tbot <${smtpConfig.auth.user}>`,
+        from: `T-Systems Ticket Automation  <${smtpConfig.auth.user}>`,
         //Receptor
         to: 'julian.lastra@tsoftlatam.com',//params.email,
         //Subject
-        subject: 'Informacion Solicitada', //${params.reminder}`,
+        subject: '[TICKET: 000001] Se solicita reinicio', //${params.reminder}`,
         //Cuerpo 
-        text: `Informacion Solicitada: https://www.tsoftglobal.com/`
+        html: 'Buenas tardes, <br><br> Por favor proceder con el reinicio del servidor: 192.168.1.35. <br><br> Muchas gracias! <br> T-Systems Assistant'
+        //text: 'texto plano';
     };
     
     transporter.sendMail(mailOptions, function (error, info) {
